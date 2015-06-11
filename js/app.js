@@ -3,10 +3,30 @@ $(document).ready(function () {
   $('.ryu').mouseenter(function () {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
+
+    Mousetrap.bind('x', function () {
+      $('.ryu-ready').hide();
+      $('.ryu-cool').show();
+    }, 'keydown');
+
+    Mousetrap.bind('x', function () {
+      $('.ryu-cool').hide();
+      $('.ryu-ready').show();
+    }, 'keyup');
   })
   .mouseleave(function() {
     $('.ryu-ready').hide();
     $('.ryu-still').show();
+
+    Mousetrap.bind('x', function () {
+      $('.ryu-still').hide();
+      $('.ryu-cool').show();
+    }, 'keydown');
+
+    Mousetrap.bind('x', function () {
+      $('.ryu-cool').hide();
+      $('.ryu-still').show();
+    }, 'keyup');
   })
   .mousedown(function() {
     playHadouken();
