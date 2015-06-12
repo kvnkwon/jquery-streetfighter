@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  $('.description').fadeIn(1700);
+
   $('.ryu').mouseenter(function () {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
@@ -40,8 +42,6 @@ $(document).ready(function () {
         $(this).css('left', '520px');
       }
     );
-    // play hadouken sound
-    // show hadouken and animate it to the right of the screen
   })
   .mouseup(function() {
     $('.ryu-throwing').hide();
